@@ -1,11 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="http://prismlibrary.com"
-             x:Class="Learn.ShinyBackground.App">
+<prism:PrismApplication x:Class="Learn.ShinyBackground.App"
+                        xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:converters="clr-namespace:Learn.ShinyBackground.Converters"
+                        xmlns:prism="http://prismlibrary.com">
   <Application.Resources>
+    <!--  Application resource dictionary  -->
+    <ResourceDictionary>
+      <Style x:Key="NoDataLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{DynamicResource Large}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+      </Style>
 
-    <!-- Application resource dictionary -->
+      <!--  https://coolors.co/c2e812-91f5ad-8b9eb7-745296-632a50  -->
+      <Color x:Key="Primary">#C2E812</Color>
+      <Color x:Key="PrimaryDark">#4ba677</Color>
+      <Color x:Key="Accent">#745296</Color>
+      <Color x:Key="NavigationBarTextColor">White</Color>
 
+      <!--  Converters  -->
+      <converters:InverseBooleanConverter x:Key="Not" />
+      <converters:DoubleConverter x:Key="Double" />
+    </ResourceDictionary>
   </Application.Resources>
 </prism:PrismApplication>

@@ -1,9 +1,10 @@
-﻿
+﻿using Xamarin.Forms;
+
 namespace Learn.ShinyBackground.Views
 {
-  public partial class MainPage
+  public partial class LogView : ContentPage
   {
-    public MainPage()
+    public LogView()
     {
       InitializeComponent();
     }

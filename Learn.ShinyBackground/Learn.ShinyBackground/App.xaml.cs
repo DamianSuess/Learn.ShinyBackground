@@ -11,7 +11,7 @@ namespace Learn.ShinyBackground
   public partial class App
   {
     public App(IPlatformInitializer initializer)
-        : base(initializer)
+      : base(initializer)
     {
     }
 
@@ -27,7 +27,10 @@ namespace Learn.ShinyBackground
       containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
 
       containerRegistry.RegisterForNavigation<NavigationPage>();
-      containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+      containerRegistry.RegisterForNavigation<MainView, MainPageViewModel>();
+      containerRegistry.RegisterForNavigation<LogView, LogViewModel>();
+      containerRegistry.RegisterForNavigation<JobsView, JobsViewModel>();
+      containerRegistry.RegisterForNavigation<CreateView, CreateViewViewModel>();
     }
   }
 }

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="Learn.ShinyBackground.Controls.CommandCell"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+  <ContentView.Content>
+    <SwipeView>
+      <SwipeView.RightItems>
+        <SwipeItems Mode="Reveal">
+          <SwipeItem BackgroundColor="{Binding SecondaryCommandColor}"
+                     Command="{Binding SecondaryCommand}"
+                     Text="{Binding SecondaryCommandText}" />
+          <SwipeItem BackgroundColor="{Binding PrimaryCommandColor}"
+                     Command="{Binding PrimaryCommand}"
+                     Text="{Binding PrimaryCommandText}" />
+        </SwipeItems>
+      </SwipeView.RightItems>
+
+      <StackLayout>
+        <Label FontSize="Body"
+               LineBreakMode="TailTruncation"
+               Text="{Binding Text}" />
+
+        <Label FontSize="Caption"
+               LineBreakMode="TailTruncation"
+               Text="{Binding Detail}" />
+
+        <BoxView BackgroundColor="Gainsboro"
+                 HeightRequest="1"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Center" />
+      </StackLayout>
+    </SwipeView>
+  </ContentView.Content>
+</ContentView>
