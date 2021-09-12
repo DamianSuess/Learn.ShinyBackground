@@ -5,13 +5,13 @@
              xmlns:controls="clr-namespace:Learn.ShinyBackground.Controls"
              Title="{Binding Title}">
   <ContentPage.ToolbarItems>
-    <ToolbarItem Command="{Binding Create}" Text="Create" />
+    <ToolbarItem Command="{Binding CmdCreate}" Text="Create" />
   </ContentPage.ToolbarItems>
 
   <ContentPage.Content>
 
     <Grid RowDefinitions="*, Auto, Auto">
-      <RefreshView Command="{Binding LoadJobs}" IsRefreshing="{Binding IsBusy}">
+      <RefreshView Command="{Binding CmdLoadJobs}" IsRefreshing="{Binding IsBusy}">
         <CollectionView Grid.Row="0" ItemsSource="{Binding Jobs}">
           <CollectionView.EmptyView>
             <Label Style="{StaticResource NoDataLabel}" Text="No jobs" />

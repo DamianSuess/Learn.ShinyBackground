@@ -1,3 +1,4 @@
+using Learn.ShinyBackground.Services;
 using Learn.ShinyBackground.ViewModels;
 using Learn.ShinyBackground.Views;
 using Prism;
@@ -26,6 +27,9 @@ namespace Learn.ShinyBackground
     {
       // Services
       containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
+      // containerRegistry.RegisterSingleton<AppNotifications>();
+      // containerRegistry.RegisterSingleton<SampleSqliteConnection>();
+      containerRegistry.RegisterSingleton<CoreDelegateServices>();
 
       // Navigation
       containerRegistry.RegisterForNavigation<NavigationPage>();
