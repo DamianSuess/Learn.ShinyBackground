@@ -19,13 +19,15 @@ namespace Learn.ShinyBackground
     {
       InitializeComponent();
 
-      await NavigationService.NavigateAsync("NavigationPage/MainPage");
+      await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(MainView)}");
     }
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
+      // Services
       containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
 
+      // Navigation
       containerRegistry.RegisterForNavigation<NavigationPage>();
       containerRegistry.RegisterForNavigation<MainView, MainPageViewModel>();
       containerRegistry.RegisterForNavigation<LogView, LogViewModel>();
