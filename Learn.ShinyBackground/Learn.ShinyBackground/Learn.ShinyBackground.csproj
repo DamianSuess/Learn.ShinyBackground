@@ -4,6 +4,14 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\Output\Shared</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\Output\Shared</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Shiny.Core" Version="2.2.0.2829" />
     <PackageReference Include="Shiny.Prism" Version="8.0.62" />
