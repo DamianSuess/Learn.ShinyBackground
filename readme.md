@@ -1,6 +1,6 @@
 # Example using Shiny Background Jobs
 
-In this learning exercise, you'll learn how to stand up basic background jobs using the Shiny frameowrk. And as an added bonus, this example uses 100% Prism Library not not ReactiveUI.
+In this learning exercise, you'll learn how to stand up basic background jobs using the [Shiny framework](https://github.com/shinyorg/shiny). And as an added bonus, this example uses 100% [Prism Library](https://github.com/PrismLibrary/Prism) not not ReactiveUI.
 
 ## What you'll learn
 
@@ -12,4 +12,4 @@ In this learning exercise, you'll learn how to stand up basic background jobs us
 This project space makes use of the following tools
 
 * [Shiny framework](https://github.com/shinyorg/shiny)
-* [Prism Library]()
+* [Prism Library](https://github.com/PrismLibrary/Prism)
